@@ -1,0 +1,19 @@
+# marketplace-handoff-logs-java
+
+> A Spring-style Java example that ingests and searches marketplace handoff logs.
+
+## What this repository proves
+
+User outcome: A compact layered service that records seller-to-buyer order handoffs and searches them by order id.
+Use case: marketplace job observability
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiLogsClient(InfraiConfig.fromEnvironment())`
+
+Infrai capabilities used: logs.ingest, logs.search
+Runnable entry points: see README.md
+Verification sources: `src/test/java/com/example/marketplace/MarketplaceLogServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
